@@ -1,0 +1,40 @@
+Problem: Explain the concept of dynamic typing with examples.
+
+Answer:
+Dynamic typing is a programming paradigm where the data type of a variable is determined at runtime, rather than at compile time.
+This means that a variable can hold a value of type integer, string, or any other type, depending on how it is used in the program.
+Here are some examples to illustrate this concept:
+python
+# Example 1: Assigning a string to a variable
+
+my_variable = "Hello, World!"
+print(type(my_variable))  
+# Output: <class 'str'>
+
+# Example 2: Assigning an integer to the same variable
+
+my_variable = 42
+print(type(my_variable))  
+# Output: <class 'int'>
+
+# Example 3: Assigning a list to the variable
+
+my_variable = [1, 2, 3]
+print(type(my_variable))  
+# Output: <class 'list'>
+
+In these examples, the data type of `my_variable` changes depending on the value assigned to it.
+This is in contrast to static typing, where the data type of a variable is determined at compile time
+
+python
+# Example of static typing (in a hypothetical language)
+my_variable: int = 42
+print(type(my_variable))  # Output: int
+
+
+Self written:
+Programming languages like python offer features of dynamic typing. It is due to this features that a programmer is not required to mention
+the data type of a variable before using it. This makes the code more flexible and easier to write. Here, interpreter of the language auto
+understands the data type of of a particular entry we have made. It is determined at run time rather than at the compile time. This means that 
+a variable can hold a value of type integer, string, or any other type, depending on how it is used in the program. 
+

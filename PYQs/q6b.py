@@ -236,4 +236,102 @@ def sort_words():
 sort_words()
 
 
+'''Question 3:
+'''
+def removeNth(s, n):
+    if n < 0 or n >= len(s):
+        return "Invalid index"
+    else:
+       return s[:n] + s[n+1:]
 
+# Test cases
+print(removeNth("hello", 2))  # Expected output: "helo"
+
+
+# import matplotlib.pyplot as plt
+# import numpy as np
+
+
+# Question 1:
+# Food  = ['Meat', 'Banana', 'Avocados', 'Sweet Potatos', 'Spinach', 'Watermelon','Coconut water', 'Beans', 'Legumes' , 'Tomato']
+# Calories = [250, 130, 140, 120, 20, 20, 10, 50, 40, 19]
+# Potassium = [40, 55, 20, 30, 40, 32, 10, 26, 25, 20]
+# Fat = [8, 5, 3, 6, 1, 1.5, 0, 2, 1.5, 2.5]
+
+
+# # Plotting the data
+# plt.plot(Food, Calories, label='Calories', marker='o')
+# plt.plot(Food, Potassium, label='Potassium', marker = 'o')
+# plt.plot(Food, Fat, label='Fat', marker = 'o')
+
+
+# plt.xlabel('Food')
+# plt.ylabel('Nutrients\n(Calories, Potassium, Fat)')
+
+# plt.title('Food vs Nutrients (Calories, Potassium, Fat)')
+
+# plt.grid()
+# plt.legend()
+# plt.show()
+
+''''''
+# Function to reverse each character and separate with commas
+def reverse_and_comma_separate(file_path, output_path):
+    # Open the input file and read the content
+    with open(file_path, 'r') as file:
+        content = file.read()
+    
+    # Reverse each character in the content and separate with commas
+    reversed_content = ','.join(reversed(content))
+    
+    # Write the reversed content to the output file
+    with open(output_path, 'w') as output_file:
+        output_file.write(reversed_content)
+    
+    print(f"Reversed content has been written to {output_path}")
+
+# Example usage
+input_file = 'input.txt'  # Path to your input file
+output_file = 'output.txt'  # Path to your output file
+reverse_and_comma_separate(input_file, output_file)
+
+
+
+
+
+import math
+
+# Function to check if a number is a perfect square
+def check_perfect_square(n):
+    # Calculate the square root of the number
+    sqrt_n = math.isqrt(n)  # Using isqrt for integer square root (avoids floating-point issues)
+    
+    # Check if the square of the square root equals the original number
+    if sqrt_n * sqrt_n == n:
+        return sqrt_n
+    else:
+        return -1
+
+# Example usage
+number = 16  # Replace this with any number you want to check
+result = check_perfect_square(number)
+
+if result != -1:
+    print(f"{number} is a perfect square! Its square root is {result}.")
+else:
+    print(f"{number} is not a perfect square.")
+
+
+x = ['12', 'hello', 456]
+x[0]*=3
+x[1][1] = 'bye'
+'''string object does not support item assignment'''
+
+def count(s):
+    for str in string.split():
+        s = '&'.join(str)
+    
+    return s
+
+print(count("Python is fun to learn."))
+   

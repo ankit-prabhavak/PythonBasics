@@ -327,11 +327,11 @@ x[0]*=3
 x[1][1] = 'bye'
 '''string object does not support item assignment'''
 
-def count(s):
-    for str in string.split():
-        s = '&'.join(str)
+# def count(s):
+#     for str in string.split():
+#         s = '&'.join(str)
     
-    return s
+#     return s
 
-print(count("Python is fun to learn."))
+# print(count("Python is fun to learn."))
    

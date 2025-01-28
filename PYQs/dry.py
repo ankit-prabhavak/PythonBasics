@@ -40,9 +40,11 @@ with open('cities.csv', 'r') as file:
         # Add the last column (Temperature, for example) to last_column_data
         last_column_data.append(row[-1])
 
+
 # Convert city_data to a numpy array for better handling (optional)
 import numpy as np
 city_data = np.array(city_data)
+
 
 # Extract the first two columns for plotting (e.g., City and Population)
 first_column = city_data[:, 0]  # First column (City names)
@@ -57,7 +59,7 @@ plt.title('City vs Population Plot')
 plt.xticks(rotation=90)  # Rotate city names for better readability
 plt.tight_layout()
 plt.legend()
-plt.show()
+# plt.show()
 
 # If you want to see the extracted last column data (e.g., Temperature)
 print("Last column data (Temperature):", last_column_data)

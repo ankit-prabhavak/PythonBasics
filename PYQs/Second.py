@@ -82,3 +82,85 @@ This approach demonstrates how you can use a lambda function in a list comprehen
 
 
 ChatGPT can make mistakes. Check important info.'''
+
+
+
+'''1. Generator Function:
+A generator function is a function that contains one or more yield statements. When the function is called, it doesn’t execute immediately. Instead, it returns a generator object. The yield keyword is used to produce a value and pause the function’s execution. The function will resume from where it left off the next time the generator is called.
+
+Example of a Generator Function:
+python
+Copy
+def my_generator():
+    yield 1
+    yield 2
+    yield 3
+
+# Creating the generator object
+gen = my_generator()
+
+# Iterating over the generator
+for value in gen:
+    print(value)
+Output:
+
+Copy
+1
+2
+3
+When the function my_generator() is called, it returns a generator object, which can be iterated over.
+Each time the yield statement is encountered, the function’s execution pauses, and the value is returned to the caller.
+When the next value is needed, the function resumes execution right after the last yield.
+2. Generator Expression:
+A generator expression is similar to a list comprehension, but instead of returning a list, it returns a generator object. The syntax is almost the same, but you use parentheses () instead of square brackets [].
+
+Example of a Generator Expression:
+python
+Copy
+# Generator expression
+gen_expr = (x * x for x in range(5))
+
+# Iterating over the generator
+for value in gen_expr:
+    print(value)
+Output:
+
+Copy
+0
+1
+4
+9
+16
+The generator expression (x * x for x in range(5)) generates the square of each number from 0 to 4, one at a time.
+Advantages of Generators:
+Memory Efficiency: Generators only produce values on the fly, so they don’t store the entire sequence in memory. This makes them particularly useful when working with large datasets or infinite sequences.
+Lazy Evaluation: You can process data as you need it, without having to compute all values at once. This can improve performance, especially when you don’t need to process all the values.
+Cleaner Code: They allow you to write more concise and readable code, especially when dealing with complex sequences.
+Example: Using Generators for an Infinite Sequence:
+A common use case for generators is to work with infinite sequences without consuming an infinite amount of memory.
+
+python
+Copy
+def infinite_numbers():
+    num = 0
+    while True:
+        yield num
+        num += 1
+
+# Create the generator object
+gen = infinite_numbers()
+
+# Get the first 5 numbers from the infinite sequence
+for i in range(5):
+    print(next(gen))
+Output:
+
+Copy
+0
+1
+2
+3
+4
+In this example, the generator infinite_numbers() will keep generating numbers indefinitely. Using next(gen), we can retrieve the next value from the sequence one at a time.
+Conclusion:
+Generators are a powerful feature in Python for handling large or infinite sequences efficiently. They allow you to generate and iterate over data without consuming unnecessary memory, making them an essential tool for working with large datasets or streams of data'''

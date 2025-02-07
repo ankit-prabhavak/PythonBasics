@@ -132,3 +132,26 @@ plt.show()
 # Summary:
 # Slicing is used to extract portions of a sequence based on indices and steps.
 # List comprehension is a concise way to generate a new list by iterating over an existing iterable and applying an expression or condition.
+
+
+
+import random
+
+def code_of_the_day():
+    quotes = [
+        "The only way to do great work is to love what you do. – Steve Jobs",
+        "Talk is cheap. Show me the code. – Linus Torvalds",
+        "Code is like humor. When you have to explain it, it’s bad. – Cory House",
+        "First, solve the problem. Then, write the code. – John Johnson",
+        "Simplicity is the soul of efficiency. – Austin Freeman",
+        "In programming, the hard part isn’t solving problems, but deciding what problems to solve. – Paul Graham",
+        "It’s not a bug, it’s an undocumented feature. – Anonymous",
+        "There are only two hard things in computer science: cache invalidation and naming things. – Phil Karlton"
+    ]
+    
+    # Randomly select a quote from the list
+    return random.choice(quotes)
+
+# Print the code of the day
+print("Code of the Day:")
+print(code_of_the_day())

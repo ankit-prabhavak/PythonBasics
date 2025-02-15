@@ -145,3 +145,64 @@ print(f"The character corresponding to ASCII value {ascii_value} is: '{char}'")
 # print("DataFrame Created:")
 # print(df) 
 
+
+
+import csv
+import pandas as pd
+import numpy as np
+
+data = []
+lastDelCol = []
+
+with open("cities.csv", "r") as file:
+    reader = csv.reader(file)
+
+    header = next(reader)
+
+    for row in reader:
+        if len(row) < 2:
+            print("skipping row with less than 2 columns")
+            continue
+
+        data.append(row[:-1])
+        lastDelCol.append(row[-1])
+
+    
+
+
+print("Collected data:")
+data = np.array(data)
+print(data)
+
+
+firstCol = data[:,0]
+secondCol = data[:,1]
+
+# Plotting logic
+import matplotlib.pyplot as plt
+
+plt.plot(firstCol, secondCol, marker='o')
+plt.title('Cities Data')
+plt.xlabel('First Column')
+plt.ylabel('Second Column')
+plt.show()
+
+# Deleting last column
+df = pd.read_csv("cities.csv")
+df.drop(df.columns[-1], axis=1, inplace=True)
+
+df.to_csv("cities.csv")
+print("Deleted the last column of the csv file")
+
+print(lastDelCol)
+
+
+
+
+   
+    
+
+
+
+
+   

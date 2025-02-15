@@ -366,53 +366,343 @@ import matplotlib.pyplot as plt
 12. Calculator using Tkinter
 '''
 
-import tkinter as tk
+# import tkinter as tk
 
-def click(button_text):
-    expression = entry.get()
-    entry.delete(0, tk.END)
-    entry.insert(0, button_text + expression)
+# def click(button_text):
+#     expression = entry.get()
+#     entry.delete(0, tk.END)
+#     entry.insert(0, button_text + expression)
 
-def clear():
-    entry.delete(0, tk.END)
+# def clear():
+#     entry.delete(0, tk.END)
 
-def calculate():
-    try:
-        result = eval(entry.get())
-        entry.delete(0, tk.END)
-        entry.insert(0, str(result))
-    except Exception as e:
-        entry.delete(0, tk.END)
-        entry.insert(0, "Error")
+# def calculate():
+#     try:
+#         result = eval(entry.get())
+#         entry.delete(0, tk.END)
+#         entry.insert(0, str(result))
+#     except Exception as e:
+#         entry.delete(0, tk.END)
+#         entry.insert(0, "Error")
 
 
-window = tk.Tk()
-window.title("Calculator")
-window.geometry("300x250")
+# window = tk.Tk()
+# window.title("Calculator")
+# window.geometry("300x250")
 
-entry = tk.Entry(window, width=20, borderwidth=5, font=("Aerial, 14"), relief = "solid")
-entry.grid(row=0, column=0, columnspan=4)
+# entry = tk.Entry(window, width=20, borderwidth=5, font=("Aerial, 14"), relief = "solid")
+# entry.grid(row=0, column=0, columnspan=4)
 
-buttons = [
-          ("1",1,0), ("2",1,1), ("3",1,2), 
-          ("4",2,0), ("5",2,1), ("6",2,2),
-          ("7",3,0), ("8",3,1), ("9",3,2), 
-                     ("0",4,1),
-          ("+",5,0), ("-",5,1), ("*",5,2), 
-          ("/",6,0), ("=",6,1), ("C",6,2),
+# buttons = [
+#           ("1",1,0), ("2",1,1), ("3",1,2), 
+#           ("4",2,0), ("5",2,1), ("6",2,2),
+#           ("7",3,0), ("8",3,1), ("9",3,2), 
+#                      ("0",4,1),
+#           ("+",5,0), ("-",5,1), ("*",5,2), 
+#           ("/",6,0), ("=",6,1), ("C",6,2),
         
-          ]
+#           ]
     
 
-for (text, row, column) in buttons:
-    if text == "C":
-        button = tk.Button(window, text=text, width=10, height=3, fg="white", bg="blue", activebackground="red", command=clear)
-    elif text == "=":
-        button = tk.Button(window, text=text, width=10, height=3,fg="white", bg="blue", activebackground="red", command=calculate)
-    else:
-        button = tk.Button(window, text=text, width=10, height=3,fg="white", bg="blue", activebackground="red", command=lambda t=text: click(t))
+# for (text, row, column) in buttons:
+#     if text == "C":
+#         button = tk.Button(window, text=text, width=10, height=3, fg="white", bg="blue", activebackground="red", command=clear)
+#     elif text == "=":
+#         button = tk.Button(window, text=text, width=10, height=3,fg="white", bg="blue", activebackground="red", command=calculate)
+#     else:
+#         button = tk.Button(window, text=text, width=10, height=3,fg="white", bg="blue", activebackground="red", command=lambda t=text: click(t))
     
-    button.grid(row=row, column=column)
+#     button.grid(row=row, column=column)
 
-window.mainloop()
+# window.mainloop()
+
+
+'''
+PU:
+1. Write a program to print all primes between a given range.
+'''
+# solution:
+
+# def is_prime(num):
+#     if num == 1:
+#         return False
+#     elif num == 2:
+#         return True
+#     else:
+#         for i in range(2, int(num**0.5) + 1):
+#             if num % i == 0:
+#                 return False
+#         return True
+    
+# def print_primes(start, end):
+#     for num in range(start, end + 1):
+#         if is_prime(num):
+#             print(num, end = " ")
+        
+# print_primes(1,20)
+
+
+'''
+PU:
+2. Write a program to create a nested dictionary to store student data and retrieve specific students details.
+'''
+# solution:
+# Creating a nested dictionary to store student data
+# students = {
+#     '101': {
+#         'name': 'Alice',
+#         'age': 20,
+#         'courses': ['Math', 'Science', 'English'],
+#         'address': '123 Elm Street'
+#     },
+#     '102': {
+#         'name': 'Bob',
+#         'age': 22,
+#         'courses': ['History', 'Math', 'Art'],
+#         'address': '456 Oak Avenue'
+#     },
+#     '103': {
+#         'name': 'Charlie',
+#         'age': 21,
+#         'courses': ['Physics', 'Chemistry', 'Biology'],
+#         'address': '789 Pine Road'
+#     }
+# }
+
+# # Function to retrieve specific student details
+# def get_student_details(student_id):
+#     # Check if student exists
+#     if student_id in students:
+#         student = students[student_id]
+#         print(f"Student ID: {student_id}")
+#         print(f"Name: {student['name']}")
+#         print(f"Age: {student['age']}")
+#         print(f"Courses: {', '.join(student['courses'])}")
+#         print(f"Address: {student['address']}")
+#     else:
+#         print("Student not found!")
+
+# # Example of retrieving student details by ID
+# student_id = input("Enter the student ID to retrieve details: ")
+# get_student_details(student_id)
+
+
+'''
+PU:
+3. Write a program to generate fibonaci series up to user defined limits.
+'''
+# solution:
+
+# def fibonacci(n):
+#     a = 0
+#     b = 1
+#     for i in range(n):
+#         if i == 0:
+#             print(a, end=" ")
+#         elif i == 1:
+#             print(b, end=" ")
+#         else:
+#             c = a + b
+#             print(c, end=" ")
+#             a = b
+#             b = c
+
+# n = int(input("Enter the number of terms: "))
+# fibonacci(n)
+
+'''
+4. Construct a python program to accept user details(name, age, and email) and display them on the screen using tkinter.
+'''
+# solution:
+# import tkinter as tk
+
+# # Create the main window
+# window = tk.Tk()
+# window.title("User Details")
+
+# # Create labels for Name, Age, and Email
+# tk.Label(window, text="Name:").grid(row=0, column=0, padx=10, pady=5)
+# tk.Label(window, text="Age:").grid(row=1, column=0, padx=10, pady=5)
+# tk.Label(window, text="Email:").grid(row=2, column=0, padx=10, pady=5)
+
+# # Create variables to store user input
+# name = tk.StringVar()
+# age = tk.StringVar()
+# email = tk.StringVar()
+
+# # Create entry widgets for Name, Age, and Email
+# tk.Entry(window, textvariable=name).grid(row=0, column=1, padx=10, pady=5)
+# tk.Entry(window, textvariable=age).grid(row=1, column=1, padx=10, pady=5)
+# tk.Entry(window, textvariable=email).grid(row=2, column=1, padx=10, pady=5)
+
+# # Label to display feedback
+# feedback = tk.Label(window, text="", fg="green")
+# feedback.grid(row=3, column=1, columnspan=2, padx=10, pady=5)
+
+# # Function to handle the submit button click
+# def submit():
+#     # Retrieve the input data
+#     user_name = name.get()
+#     user_age = age.get()
+#     user_email = email.get()
+
+#     # Check if all fields are filled
+#     if user_name and user_age and user_email:
+#         feedback.config(text=f"Details Submitted: {user_name}, {user_age}, {user_email}")
+#     else:
+#         feedback.config(text="Please fill out all fields.", fg="red")
+
+# # Create the Submit button
+# tk.Button(window, text="Submit", command=submit).grid(row=4, column=1, pady=10)
+
+# # Run the main loop
+# window.mainloop()
+
+'''
+PU:
+5. Write a program to plot a bar chart and a pie chart using matplotlib.
+'''
+# solution:
+# import matplotlib.pyplot as plt
+
+# # Data
+# overs = [1, 2, 3, 4, 5, 6]
+# runs = [10, 20, 30, 40, 50, 60]
+
+
+# bar_colors = ['lightblue', 'lightgreen', 'lightcoral', 'gold', 'lightpink', 'lightskyblue']
+
+
+# # Create subplots
+# fig, axs = plt.subplots(1, 2)  # 1 row, 2 columns
+
+# # Bar plot on the first subplot
+# axs[0].bar(overs, runs, color=bar_colors)
+# axs[0].set_title('Power Play Stats')  # Corrected from .title() to .set_title()
+# axs[0].set_xlabel('Overs')  # Corrected from .xlabel() to .set_xlabel()
+# axs[0].set_ylabel('Runs')  # Corrected from .ylabel() to .set_ylabel()
+
+# # Pie chart on the second subplot
+# axs[1].pie(runs, labels=overs, autopct='%1.1f%%')
+# axs[1].set_title("Different Phases")  # Corrected title
+
+# # Show the legend for the pie chart
+# axs[1].legend(title="Overs")
+
+# # Display the plot
+# plt.tight_layout()  # Adjusts the layout so that everything fits without overlap
+# plt.show()
+
+'''
+PU:
+6. Write a program to visualize random data points using both histogram and a scatter plot.
+'''
+# solution:
+# import matplotlib.pyplot as plt
+
+# # Data: Countries and their corresponding centuries
+# country_century = {"AUS": 10, "NZ": 8, "ENG": 12, "SA": 9, "PAK": 11}
+
+# # Create subplots
+# fig, axs = plt.subplots(1, 2)
+
+# # Plotting the histogram with the century values
+# axs[0].hist(country_century.values(), bins=[8,9,10,11,12], edgecolor='black')  # Define bins for centuries
+# axs[0].set_title("Sachin's Centuries")
+# axs[0].set_xlabel("Centuries")
+# axs[0].set_ylabel("Number of Countries")
+
+
+# # Creating lists for the country names and century counts
+# countries = list(country_century.keys())
+# centuries = list(country_century.values())
+
+# # Create a scatter plot
+
+# axs[1].scatter(countries, centuries, color='blue', s=100, edgecolor='black')
+
+# # Adding titles and labels
+# axs[1].set_title("Sachin's Centuries by Country")
+# axs[1].set_xlabel("Country")
+# axs[1].set_ylabel("Number of Centuries")
+# # Display the plot
+# plt.tight_layout()  # Adjust layout to prevent overlap
+# plt.show()
+
+'''
+PU:
+7. Write a program to create a pandas Dataframe from a csv file and demonstrate the operations like adding a column, deleting a column, and filtering rows.
+'''
+# solution:
+# import pandas as pd
+# import csv
+
+# # Reading the CSV file and creating the DataFrame
+# with open("cities.csv", "r") as file:
+#     reader = csv.reader(file)
+#     header = next(reader)  # Reading the header
+#     data = [row for row in reader]  # Reading the data rows
+#     df = pd.DataFrame(data, columns=header)  # Creating DataFrame
+#     print("DataFrame created:")
+#     print(df)
+
+# # Example CSV content ("cities.csv"):
+# # City,Population,Area
+# # New York,8419600,783.8
+# # Los Angeles,3980400,503
+# # Chicago,2716000,589
+
+# # Add a new column
+# df['Income'] = [15000, 20000, 18500,]  # Adding a new column 'Income'
+# print("\nDataFrame after adding a new 'Income' column:")
+# print(df)
+
+# # Delete a column (for example, 'Area')
+# df = df.drop(columns=['Area'])
+# print("\nDataFrame after deleting the 'Area' column:")
+# print(df)
+
+# # Filter rows where the population is greater than 4000000
+# filtered_df = df[df['Population'].astype(int) > 4000000]
+# print("\nFiltered DataFrame (Population > 4 million):")
+# print(filtered_df)
+
+
+'''
+PU:
+8. Write a program to handle exceptions where a user enters a non-integer value, and the program promts them to enter valid integer.
+'''
+
+# solution:
+
+
+# cond = False
+# while cond != True:
+#     try:
+#         num = int(input("Enter an integer: "))
+#         cond = True
+#         print(f"Entered number was: {num}")
+#     except ValueError:
+#         print("Please enter a valid integer")
+#     finally:
+#         print("Program executed successfully")
+    
+'''
+9. Write a program to read a file and display its content. If the file does not exist, display an error message.
+'''
+
+# solution:
+# try:
+#     file = open("file.txt", "r")
+#     print(file.read())
+#     file.close()
+
+# except FileNotFoundError:
+#     print("File not found. Please check the file path and name.")
+
+# finally:
+#     print("Program executed successfully")
+
+
+
 

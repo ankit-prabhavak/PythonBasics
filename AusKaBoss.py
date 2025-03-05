@@ -6,9 +6,13 @@ def VandeMatram():
     print("Champions Trophy 2025")
     print("See U On 9 March Final Day!")
 
+def OneMoreToGo():
+    print("Its NZ vs IND")
+    print("The big final. Who's gonna win this")
 
 def main():
     VandeMatram()
+    OneMoreToGo()
 
 # Main function implementation.
 main()

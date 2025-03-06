@@ -9,6 +9,10 @@ def VandeMatram():
 def OneMoreToGo():
     print("Its NZ vs IND")
     print("The big final. Who's gonna win this")
+    print("NZ is a very big threat for India. They look very strong.")
+    print("But India has a very strong team too. They have a lot of experience.")
+    print("This is going to be a very tough match. Who do you think is gonna win")
+    print("The final match is going to be a very exciting one. Let's see what happens")
 
 def main():
     VandeMatram()

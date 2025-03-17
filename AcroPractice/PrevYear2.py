@@ -65,7 +65,7 @@ print(f"The character corresponding to ASCII value {ascii_value} is: '{char}'")
 #     def gcd(a, b):
 #         while b != 0:
 #             a, b = b, a % b
-#             return a
+#          return a
 #         # Find the LCM using the formula:
 #         lcm = abs(num1 * num2) // gcd(num1, num2)
 #         return lcm

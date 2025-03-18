@@ -66,7 +66,7 @@ Previous year university question
 '''
 
 # solution:
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 # food = ["Meat", "Banana", "Avocado", "Apple", "Orange"]
 # calories = [200, 100, 150, 50, 60]

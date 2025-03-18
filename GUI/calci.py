@@ -1,6 +1,5 @@
 import tkinter as tk
 
-
 def click(button_text):
     expression = entry.get()
     entry.delete(0, tk.END)
@@ -34,7 +33,6 @@ buttons = [
     ("0",4,0), (".",4,1), ("=",4,2), ("+",4,3)
     ,("C",5,0)
 ]
-
 
 
 for (text, row, column) in buttons:

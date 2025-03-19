@@ -29,12 +29,17 @@ df = pd.DataFrame(data)
 # print(pf)
 # print(df)
 
+# gf = pd.DataFrame(petha)
+# print(gf)
 petha = [[1,2,3],
          [4,5,6],
-         [4,9]]
+         [4,9,1]]
 
-gf = pd.DataFrame(petha)
-print(gf)
+petha = np.array(petha)
+index = petha[[1,2,0], [0,1,1]]
+
+print(index)
+
 
 
 

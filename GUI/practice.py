@@ -77,4 +77,3 @@ tk.Button(window, text="Close", bg="red", command=window.destroy).grid(row=10, c
 
 # run the application
 window.mainloop()
-

@@ -10,7 +10,15 @@ data = {
 }
 
 df = pd.DataFrame(data)
+# print(df["Name"])
+
+df = df.set_index("Name")
+first  = df.loc["Ankit"]
+print(first)
+
+
 # print(df)
+
 # df.info()
 # print(df.head())
 
@@ -31,14 +39,14 @@ df = pd.DataFrame(data)
 
 # gf = pd.DataFrame(petha)
 # print(gf)
-petha = [[1,2,3],
-         [4,5,6],
-         [4,9,1]]
+# petha = [[1,2,3],
+#          [4,5,6],
+#          [4,9,1]]
 
-petha = np.array(petha)
-index = petha[[1,2,0], [0,1,1]]
+# petha = np.array(petha)
+# index = petha[[1,2,0], [0,1,1]]
 
-print(index)
+# print(index)
 
 
 

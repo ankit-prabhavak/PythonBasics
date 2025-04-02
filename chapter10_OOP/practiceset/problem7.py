@@ -10,11 +10,14 @@ class Student:
     def calculate_average(self):
         return (self.maths + self.science + self.english) / 3
     
+    
 
 student1 = Student("Ankit", 90, 85, 95)
 print(student1.calculate_average())  # Output: 90.0
 
 student2 = Student("Anmol", 96, 80, 81)
 print(round(student2.calculate_average()))  # Output: 86
+
+print(dir(student1))  # This will show all the attributes and methods of the student1 object
 
 

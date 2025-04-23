@@ -2,9 +2,10 @@ class Person:
 
     college = "PSIT"
 
-    def __init__(self, name, birth_year):
+    def __init__(self, name, birth_year, college):
         self.name = name
         self.birth_year = birth_year
+        self.college = college
 
     def get_info(self):
         print(f"Name: {self.name}, Birth Year: {self.birth_year}, College: {self.college}")
@@ -22,7 +23,7 @@ class Person:
 
 
 # Create an object of the Person class
-person1 = Person("John Doe", 2000)
+person1 = Person("John Doe", 2000, "KIT")
 person1.get_info()
 person1.is_adult()
 
@@ -30,4 +31,6 @@ age = person1.calculate_age()
 print(f"{person1.name} is {age} years old.")
 
 print(f"College: {person1.college}")
+
+print(Person.college)
 

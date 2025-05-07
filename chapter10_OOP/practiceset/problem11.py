@@ -1,40 +1,66 @@
-'''
-Problem Statement:
-WeCare insurance company wants to calculate the premium of vehicles.
-Vehicles are of two types: TwoWheeler and FourWheeler. Each vehicle is identified by a vehicle id, type, cost and premium amount.
-For TwoWheeler, the premium is 2% of the cost and for FourWheeler, it is 6% of the cost.
-calculate the premium amount and display the vehicle details.'''
-
 class Vehicle:
+    def __init__(self):
+        self.__vehicle_id = None
+        self.__vehicle_type = None
+        self.__cost = None
+        self.__premium_amount = None
 
-    def __init__(self, vehicle_id, vehicle_type, cost):
-        self.vehicle_id = vehicle_id
-        self.vehicle_type = vehicle_type
-        self.cost = cost
+    # Getter and Setter methods
+    def set_vehicle_id(self, vehicle_id):
+        self.__vehicle_id = vehicle_id
 
+    def get_vehicle_id(self):
+        return self.__vehicle_id
+
+    def set_vehicle_type(self, vehicle_type):
+        self.__vehicle_type = vehicle_type
+
+    def get_vehicle_type(self):
+        return self.__vehicle_type
+
+    def set_cost(self, cost):
+        self.__cost = cost
+
+    def get_cost(self):
+        return self.__cost
+
+    def get_premium_amount(self):
+        return self.__premium_amount
+
+    # Method to calculate premium
     def calculate_premium(self):
-        if self.vehicle_type == "TwoWheeler":
-            return 0.02 * self.cost
-        elif self.vehicle_type == "FourWheeler":
-            return 0.06 * self.cost
+        if self.__vehicle_type == "TwoWheeler":
+            self.__premium_amount = 0.02 * self.__cost
+        elif self.__vehicle_type == "FourWheeler":
+            self.__premium_amount = 0.06 * self.__cost
         else:
             raise ValueError("Invalid vehicle type")
 
-    def display_details(self):
-        premium = self.calculate_premium()
-        print(f"Vehicle ID: {self.vehicle_id}")
-        print(f"Vehicle Type: {self.vehicle_type}")
-        print(f"Cost: \u20B9{self.cost}")
-        print(f"Premium Amount: \u20B9{premium}")
+    # Method to display vehicle details
+    def display_vehicle_details(self):
+        print(f"Vehicle ID: {self.__vehicle_id}")
+        print(f"Vehicle Type: {self.__vehicle_type}")
+        print(f"Cost: ₹{self.__cost}")
+        print(f"Premium Amount: ₹{self.__premium_amount}")
 
 
 # Example usage
-vehicle1 = Vehicle("TW123", "TwoWheeler", 50000)
-vehicle1.display_details()
+try:
+    vehicle1 = Vehicle()
+    vehicle1.set_vehicle_id("TW123")
+    vehicle1.set_vehicle_type("TwoWheeler")
+    vehicle1.set_cost(50000)
+    vehicle1.calculate_premium()
+    vehicle1.display_vehicle_details()
 
-print()
+    print()
 
-# Example usage for FourWheeler
-vechicle2 = Vehicle("FW456", "FourWheeler", 200000)
-vechicle2.display_details()
+    vehicle2 = Vehicle()
+    vehicle2.set_vehicle_id("FW456")
+    vehicle2.set_vehicle_type("FourWheeler")
+    vehicle2.set_cost(800000)
+    vehicle2.calculate_premium()
+    vehicle2.display_vehicle_details()
 
+except ValueError as e:
+    print(e)

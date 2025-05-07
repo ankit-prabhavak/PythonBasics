@@ -1,4 +1,4 @@
-class Admission:
+''''class Admission:
 
     __student_id = None
     __marks = None
@@ -36,3 +36,5 @@ class Admission:
         self.__student_id = id
         self.__marks = marks
         self.__age = age
+'''
+

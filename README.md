@@ -1,6 +1,6 @@
-# PythonBasics
+# Python
 
-Welcome to the **PythonBasics** repository! This repository is designed to help you learn and understand both the basics and more advanced concepts of the Python programming language. Whether you're just starting or you're looking to enhance your Python skills, this repository covers everything from basic syntax to advanced topics like Object-Oriented Programming (OOP), error handling, and more.
+Welcome to the **Python** repository! This repository is designed to help you learn and understand both the basics and more advanced concepts of the Python programming language. Whether you're just starting or you're looking to enhance your Python skills, this repository covers everything from basic syntax to advanced topics like Object-Oriented Programming (OOP), error handling, and more.
 
 ## Introduction
 

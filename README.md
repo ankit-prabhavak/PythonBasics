@@ -35,4 +35,4 @@ To get started with Python, you'll first need to install the Python interpreter.
 Once Python is installed on your machine, you can clone this repository using Git. Open your terminal or command prompt and enter the following command:
 
 ```bash
-git clone https://github.com/yourusername/PythonBasics.git
+git clone https://github.com/yourusername/Python.git
